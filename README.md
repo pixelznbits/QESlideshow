@@ -5,8 +5,11 @@ Barebones slideshow maker. More features to be added.
 Nothing fancy. Runs in a browser locally. Just choose images, choose a song, start. Written in Javascript and HTML. 
 
 Future features wanted:
+
 .mp4 export
+
 Nice UI with image preview and timeline
+
 more sorting options
 
 
