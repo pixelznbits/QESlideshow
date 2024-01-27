@@ -207,7 +207,7 @@ function startSlideshow() {
         if (source && audioLoaded == false) {
             audioLoaded = true;
         }
-    }
+    
     currentIndex = 0;
     currentIndexB = 0;
     imageALoaded = false;
@@ -223,7 +223,7 @@ function startSlideshow() {
     document.getElementById("start-slideshow-button").style.display = "none";
 
 }
-
+}
 
 function endSlideshow() {
     if (slideshowActive) {
