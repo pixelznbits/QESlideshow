@@ -1,0 +1,71 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow App</title>
+    <style>
+        #slideshow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            z-index: 9999;
+        }
+
+        #start-slideshow-button {
+            display: block;
+            margin: 10px;
+        }
+
+        .canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="files" multiple accept="image/*">
+    
+    <button id="start-slideshow-button" onclick="startSlideshow()">Start Slideshow</button>
+
+    <div id="slideshow-container" style="display:none;">
+        <canvas class="canvas" id="canvas"></canvas>
+      
+    </div>
+
+    <h2>Image List</h2>
+    <ul id="images"></ul>
+
+    <label for="sortType">Sort By:</label>
+    <select id="sortType" onchange="sortImages()">
+        <option value="filename">Filename</option>
+        <option value="date">Date</option>
+        <!-- Add more sorting options as needed -->
+    </select>
+
+    <label for="frameRate">Frame Rate:</label>
+    <input type="number" id="frameRate" value="30" min="1" max="60" step="1">
+    
+    <label for="slideshowInterval">Slideshow Interval (seconds):</label>
+    <input type="number" id="slideshowInterval" value="8" min="2" max="60" step="1">
+
+    
+    <label for="fadeLength">Fade Duration (seconds):</label>
+    <input type="number" id="fadeLength" value="4" min="1" max="10" step="1">
+
+
+    <input type="file" id="musicFile" style="display: none;">
+    <button onclick="loadMusic()">Choose Music File</button>
+    
+
+    
+<script src="slideshow.js"></script>
+</body>
+</html>
